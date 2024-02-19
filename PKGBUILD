@@ -4,7 +4,7 @@
 # Fabio 'Lolix' Loli <fabio.loli@disroot.org> -> https://github.com/FabioLolix
 
 pkgname=yacreader-full
-pkgver=9.14.1
+pkgver=9.14.2
 pkgrel=1
 pkgdesc="Comic reader for cross-platform reading and managing your digital comic collection. Complete set of features: Poppler (better PDF support); libarchive (better archive support: tar, 7z, zip, rar, zstd); headless server."
 arch=(x86_64)
