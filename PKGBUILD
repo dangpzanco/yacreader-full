@@ -10,8 +10,10 @@ pkgdesc="Comic reader for cross-platform reading and managing your digital comic
 arch=(x86_64)
 url="https://www.yacreader.com/"
 license=(GPL3)
-depends=(poppler-qt5 qt5-base qt5-multimedia qt5-quickcontrols2 qt5-graphicaleffects qt5-svg libarchive)
-makedepends=(git qt5-tools)
+# depends=(poppler-qt5 qt5-base qt5-multimedia qt5-quickcontrols2 qt5-graphicaleffects qt5-svg libarchive)
+depends=(poppler-qt6 qt6-base qt6-multimedia qt6-quickcontrols2 qt6-5compat libarchive
+         glibc libglvnd gcc-libs hicolor-icon-theme)
+makedepends=(git qt6-tools qt6-svg)
 optdepends=('qt5-imageformats: Support for extra image formats'
             'qrencode: YACReaderLibrary server info qr codes')
 provides=(yacreader yacreaderlibraryserver)
