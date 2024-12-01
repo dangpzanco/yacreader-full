@@ -1,7 +1,4 @@
 # Maintainer: Daniel Zanco <dangpzanco at gmail dot com>
-# Contributors:
-# Felix Kauselmann <licorn at gmail dot com>
-# Fabio 'Lolix' Loli <fabio.loli@disroot.org> -> https://github.com/FabioLolix
 
 pkgname=yacreader-full
 pkgver=9.14.2
@@ -10,8 +7,7 @@ pkgdesc="Comic reader for cross-platform reading and managing your digital comic
 arch=(x86_64)
 url="https://www.yacreader.com/"
 license=(GPL3)
-# depends=(poppler-qt5 qt5-base qt5-multimedia qt5-quickcontrols2 qt5-graphicaleffects qt5-svg libarchive)
-depends=(poppler-qt6 qt6-base qt6-multimedia qt6-quickcontrols2 qt6-5compat libarchive
+depends=(poppler-qt6 qt6-base qt6-multimedia qt6-declarative qt6-5compat libarchive
          glibc libglvnd gcc-libs hicolor-icon-theme)
 makedepends=(git qt6-tools qt6-svg)
 optdepends=('qt5-imageformats: Support for extra image formats'
@@ -23,7 +19,7 @@ sha256sums=('SKIP')
 
 build() {
   cd "${srcdir}/yacreader"
-  qmake-qt5 CONFIG+="poppler libarchive server_standalone"
+  qmake6 CONFIG+="poppler libarchive server_standalone"
   make
 }
 
