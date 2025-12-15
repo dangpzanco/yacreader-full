@@ -1,7 +1,7 @@
 # Maintainer: Daniel Zanco <dangpzanco at gmail dot com>
 
 pkgname=yacreader-full
-pkgver=9.15.0
+pkgver=9.16.1
 pkgrel=1
 pkgdesc="Comic reader for cross-platform reading and managing your digital comic collection. Complete set of features: Poppler (better PDF support); libarchive (better archive support: tar, 7z, zip, rar, zstd); headless server."
 arch=(x86_64)
@@ -15,7 +15,9 @@ optdepends=('qt6-imageformats: Support for extra image formats'
 provides=(yacreader yacreaderlibraryserver)
 conflicts=(yacreader)
 source=("git+https://github.com/YACReader/yacreader.git#tag=${pkgver}")
+# source=("git+https://github.com/YACReader/yacreader.git#branch=develop")
 sha256sums=('SKIP')
+
 
 build() {
   cd "${srcdir}/yacreader"
